@@ -47,6 +47,14 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        roblox: {
+          blue: "hsl(var(--roblox-blue))",
+          "blue-dark": "hsl(var(--roblox-blue-dark))",
+          green: "hsl(var(--roblox-green))",
+          red: "hsl(var(--roblox-red))",
+          gray: "hsl(var(--roblox-gray))",
+          "dark-gray": "hsl(var(--roblox-dark-gray))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
