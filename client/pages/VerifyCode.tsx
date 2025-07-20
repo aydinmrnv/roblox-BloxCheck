@@ -1,11 +1,23 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Alert, AlertDescription } from "@/components/ui/alert";
-import { Shield, ArrowLeft, CheckCircle, AlertCircle, ExternalLink } from "lucide-react";
+import {
+  Shield,
+  ArrowLeft,
+  CheckCircle,
+  AlertCircle,
+  ExternalLink,
+} from "lucide-react";
 
 export default function VerifyCode() {
   const [code, setCode] = useState("");
@@ -19,7 +31,7 @@ export default function VerifyCode() {
     if (!code.trim()) {
       setVerificationResult({
         success: false,
-        message: "Please enter a verification code"
+        message: "Please enter a verification code",
       });
       return;
     }
@@ -32,14 +44,15 @@ export default function VerifyCode() {
       // For demo purposes, we'll show success for any non-empty code
       setVerificationResult({
         success: true,
-        message: "Your Roblox developer account has been successfully verified!"
+        message:
+          "Your Roblox developer account has been successfully verified!",
       });
       setIsVerifying(false);
     }, 2000);
   };
 
   const handleKeyPress = (e: React.KeyboardEvent) => {
-    if (e.key === 'Enter') {
+    if (e.key === "Enter") {
       handleVerify();
     }
   };
@@ -54,7 +67,10 @@ export default function VerifyCode() {
               <Shield className="h-8 w-8 text-roblox-blue" />
               <h1 className="text-2xl font-bold text-foreground">BloxCheck</h1>
             </div>
-            <Link to="/" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
+            <Link
+              to="/"
+              className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+            >
               <ArrowLeft className="h-4 w-4" />
               Back to Home
             </Link>
@@ -72,7 +88,9 @@ export default function VerifyCode() {
                   <Shield className="h-8 w-8 text-roblox-blue" />
                 </div>
               </div>
-              <CardTitle className="text-2xl">Enter Verification Code</CardTitle>
+              <CardTitle className="text-2xl">
+                Enter Verification Code
+              </CardTitle>
               <CardDescription>
                 Please enter the verification code you received
               </CardDescription>
@@ -93,21 +111,33 @@ export default function VerifyCode() {
               </div>
 
               {verificationResult && (
-                <Alert className={verificationResult.success ? "border-roblox-green bg-roblox-green/5" : "border-roblox-red bg-roblox-red/5"}>
+                <Alert
+                  className={
+                    verificationResult.success
+                      ? "border-roblox-green bg-roblox-green/5"
+                      : "border-roblox-red bg-roblox-red/5"
+                  }
+                >
                   <div className="flex items-center gap-2">
                     {verificationResult.success ? (
                       <CheckCircle className="h-4 w-4 text-roblox-green" />
                     ) : (
                       <AlertCircle className="h-4 w-4 text-roblox-red" />
                     )}
-                    <AlertDescription className={verificationResult.success ? "text-roblox-green" : "text-roblox-red"}>
+                    <AlertDescription
+                      className={
+                        verificationResult.success
+                          ? "text-roblox-green"
+                          : "text-roblox-red"
+                      }
+                    >
                       {verificationResult.message}
                     </AlertDescription>
                   </div>
                 </Alert>
               )}
 
-              <Button 
+              <Button
                 onClick={handleVerify}
                 disabled={isVerifying}
                 className="w-full bg-roblox-blue hover:bg-roblox-blue-dark text-white font-semibold py-3 text-lg transition-all duration-200"
@@ -136,14 +166,14 @@ export default function VerifyCode() {
                 </div>
               </div>
 
-              <a 
-                href="https://roblox-verification.vercel.app/" 
-                target="_blank" 
+              <a
+                href="https://roblox-verification.vercel.app/"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="block"
               >
-                <Button 
-                  variant="outline" 
+                <Button
+                  variant="outline"
                   className="w-full border-roblox-blue/30 text-roblox-blue hover:bg-roblox-blue/5 font-semibold transition-all duration-200"
                 >
                   <AlertCircle className="mr-2 h-4 w-4" />
@@ -160,7 +190,8 @@ export default function VerifyCode() {
               <div className="text-center space-y-2">
                 <h3 className="font-semibold text-sm">Need Help?</h3>
                 <p className="text-xs text-muted-foreground">
-                  If you're having trouble with verification, make sure you have the correct code from your Roblox developer dashboard.
+                  If you're having trouble with verification, make sure you have
+                  the correct code from your Roblox developer dashboard.
                 </p>
               </div>
             </CardContent>

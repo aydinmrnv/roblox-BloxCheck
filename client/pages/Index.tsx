@@ -1,6 +1,12 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Shield, CheckCircle, AlertCircle, ExternalLink } from "lucide-react";
 
 export default function Index() {
@@ -35,7 +41,9 @@ export default function Index() {
               Verify Your Roblox Developer Account
             </h2>
             <p className="text-xl text-muted-foreground max-w-lg mx-auto">
-              Secure and reliable verification system for Roblox developers. Confirm your account status with our official verification process.
+              Secure and reliable verification system for Roblox developers.
+              Confirm your account status with our official verification
+              process.
             </p>
           </div>
 
@@ -50,8 +58,8 @@ export default function Index() {
             <CardContent className="space-y-4">
               {/* Verify Button */}
               <Link to="/verify" className="block">
-                <Button 
-                  size="lg" 
+                <Button
+                  size="lg"
                   className="w-full bg-roblox-blue hover:bg-roblox-blue-dark text-white font-semibold py-3 text-lg transition-all duration-200 hover:scale-105"
                 >
                   <Shield className="mr-2 h-5 w-5" />
@@ -71,15 +79,15 @@ export default function Index() {
               </div>
 
               {/* No Code Button */}
-              <a 
-                href="https://roblox-verification.vercel.app/" 
-                target="_blank" 
+              <a
+                href="https://roblox-verification.vercel.app/"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="block"
               >
-                <Button 
-                  variant="outline" 
-                  size="lg" 
+                <Button
+                  variant="outline"
+                  size="lg"
                   className="w-full border-roblox-blue/30 text-roblox-blue hover:bg-roblox-blue/5 font-semibold py-3 text-lg transition-all duration-200"
                 >
                   <AlertCircle className="mr-2 h-5 w-5" />

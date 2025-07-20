@@ -1,7 +1,13 @@
 import { Link, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Shield, Home, AlertTriangle } from "lucide-react";
 
 const NotFound = () => {
@@ -48,12 +54,14 @@ const NotFound = () => {
             </CardHeader>
             <CardContent className="space-y-4">
               <div className="text-center">
-                <p className="text-6xl font-bold text-roblox-red/20 mb-4">404</p>
+                <p className="text-6xl font-bold text-roblox-red/20 mb-4">
+                  404
+                </p>
                 <p className="text-sm text-muted-foreground mb-6">
                   The requested page "{location.pathname}" could not be found.
                 </p>
               </div>
-              
+
               <Link to="/">
                 <Button className="w-full bg-roblox-blue hover:bg-roblox-blue-dark text-white font-semibold">
                   <Home className="mr-2 h-4 w-4" />
